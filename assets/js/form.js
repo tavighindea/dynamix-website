@@ -21,7 +21,7 @@ testForm.addEventListener('submit', function(elem) {
     },
     body: new URLSearchParams(formData).toString()
     })
-    .then(function(res) {
+    .then(function() {
         if (checkInputs() === true) {
             M.toast({
                 html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
