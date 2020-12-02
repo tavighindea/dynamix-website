@@ -11,26 +11,25 @@ const successMessage = document.getElementsById('success-message');
 
 testForm.addEventListener('submit', function(elem) {
     elem.preventDefault();
-
-    if (checkInputs() === true) {
-        const formData = new formData(testForm);
-        fetch(testForm.getAttribute('action'),{
-        method: 'POST',
-        headers: {
-            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams(formData).toString()
-        })
-        .then(function(res) {
-            if (res) {
-                M.toast({
-                    html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
-                    classes: 'pulse'
-                });
-            }
-        });
-    }
+    
+    const formData = new formData(testForm);
+    fetch(testForm.getAttribute('action'),{
+    method: 'POST',
+    headers: {
+        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
+    body: new URLSearchParams(formData).toString()
+    })
+    .then(function(res) {
+        if (checkInputs() === true) {
+            M.toast({
+                html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+                classes: 'pulse'
+            });
+        }
+    });
+    
 });
 
 function checkInputs() {
