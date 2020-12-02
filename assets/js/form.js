@@ -4,9 +4,9 @@ const formTitle = document.getElementById('contact-title')
 const name = document.getElementById('name');
 const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
-const nameError = document.getElementsById('name-error');
-const lastNameError = document.getElementsById('last-name-error');
-const emailError = document.getElementsById('email-error');
+const nameError = document.getElementsByClassName('name-error');
+const lastNameError = document.getElementsByClassName('last-name-error');
+const emailError = document.getElementsByClassName('email-error');
 const successMessage = document.getElementsById('success-message');
 
 testForm.addEventListener('submit', function(elem) {

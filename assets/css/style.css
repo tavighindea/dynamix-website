@@ -656,13 +656,13 @@ figcaption p {
   padding: 20px;
   margin: 10px;
 }
-#name-error{
+.name-error{
   display: none;
 }
-#last-name-error {
+.last-name-error {
   display: none;
 }
-#email-error {
+.email-error {
   display: none;
 }
 
