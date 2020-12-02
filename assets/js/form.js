@@ -19,9 +19,6 @@ form.addEventListener('submit', function(elem) {
 })
 
 function checkInputs() {
-    name.preventDefault();
-    lastName.preventDefault();
-    email.preventDefault();
     //get values from the inputs
     const nameValue = name.value.trim();
     const lastNameValue = lastName.value.trim();
