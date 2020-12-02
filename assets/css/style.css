@@ -564,6 +564,13 @@ figcaption p {
   color: #ffdf00;
   text-align: center;
 }
+
+.contact-container-inner p {
+  color: red;
+  font-weight: lighter;
+  text-align: center;
+}
+
 .contact-container::after {
   content: " ";
   display: block;
@@ -649,10 +656,31 @@ figcaption p {
   padding: 20px;
   margin: 10px;
 }
+#name-error{
+  display: none;
+}
+#last-name-error {
+  display: none;
+}
+#email-error {
+  display: none;
+}
 
 .hidden {
   visibility: hidden;
   height: 0;
+}
+
+.result {
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.inactive {
+  display: none;
 }
 
 /* back to top */

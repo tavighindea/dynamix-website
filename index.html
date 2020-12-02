@@ -328,24 +328,28 @@
     <!-- newsletter form -->
     <div class="contact-container" id="contact-container-anchor">
         <div class="contact-container-inner card">
-            <h2>cere o sedinta de proba</h2>
-             <form id="form" name="contact" method="POST" netlifly-honeypot="bot-field" data-netlify="true">
+            <h2 id="contact-title">cere o sedinta de proba</h2>
+            <form id="form" class="my-form" name="contact" method="POST" netlifly-honeypot="bot-field" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="form-name" value="contact">
                 <p class="hidden">
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
+                </p>
                 <div class="form-control">
                     <input type="text" name="name" id="name" placeholder="Nume" required>
+                    <p id="name-error" > Numele introdus nu este valid</p>
                 </div>
                 <div class="form-control">
                     <input type="text" name="last-name" id="last-name" placeholder="Prenume" required>
+                    <p id="last-name-error" > Prenumele introdus nu este valid</p>
                 </div>
                 <div class="form-control">
                     <input type="email" name="email" id="email" placeholder="Email" required>
+                    <p id="email-error" > Email-ul introdus nu este valid</p>
                 </div>
                 <button type="submit" id="btn-form" value="submit" class="btn btn-primary">Trimite</button>
             </form>
+            <h1 id="success-message" class="result post-sent">Te vom contacta in curand pentru sedinta ta de proba GRATUITA! </h1>
         </div>
     </div>
     
@@ -445,6 +449,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/topFunction.js"></script>
+    <script src="assets/js/formSubmission.js"></script>
 </body>
 
 </html>

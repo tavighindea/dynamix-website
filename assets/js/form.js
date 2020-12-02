@@ -1,36 +1,46 @@
 const form = document.getElementById('form');
+const formTitle = document.getElementById('contact-title')
 const name = document.getElementById('name');
 const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
+const nameError = document.getElementsById('name-error');
+const lastNameError = document.getElementsById('last-name-error');
+const emailError = document.getElementsById('email-error');
+const successMessage = document.getElementsById('success-message');
 
 form.addEventListener('submit', function(elem) {
     elem.preventDefault();
 
     if (checkInputs() === true) {
-        alert('Te vom contacta in curand pentru sedinta ta de proba GRATUITA!');
+        formTitle.remove();
+        form.remove();
+        successMessage.style.display('flex');
     }
 })
 
 function checkInputs() {
+    name.preventDefault();
+    lastName.preventDefault();
+    email.preventDefault();
     //get values from the inputs
     const nameValue = name.value.trim();
     const lastNameValue = lastName.value.trim();
     const emailValue = email.value.trim();
 
     if (nameValue === '' || (typeof nameValue) !== 'string' || !isName(nameValue)) {
-        alert('Te rugam sa introduci un Nume valid');
+        nameError.style.display = 'block';
         return false;
     }
     if (lastNameValue === '' || (typeof lastNameValue) !== 'string' || !isName(lastNameValue)) {
-        alert('Te rugam sa introduci un Prenume valid');
+        lastNameError.style.display = 'block';;
         return false;
     }
     if (emailValue === '') {
-        alert('Campul pentru email nu poate fi gol!');
+        emailError.style.display = 'block';
         return false;
     }
     if (!isEmail(emailValue)) {
-        alert('Email-ul introdus nu este corect!');
+        emailError.style.display = 'block';
         return false;
     }
     return true;
