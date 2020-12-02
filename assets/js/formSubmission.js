@@ -1,28 +1,23 @@
-function sendFormData() {
+import {checkInputs} from '/assets/js/form.js';
 
-    function sendData() {
-      var XHR = new XMLHttpRequest()
-      var FD = new FormData(form)
-      XHR.addEventListener('load', function(event) {
-        form.classList.add('inactive')
-        var success = document.querySelectorAll('.post-sent')[0]
-        success.classList.add('active')
-      })
-      XHR.addEventListener('error', function(event) {
-        form.classList.add('inactive')
-        var error = document.querySelectorAll('.post-error')[0]
-        error.classList.add('active')
-      })
-      XHR.open('POST', '#')
-      XHR.send(FD)
+let contactForm = document.querySelector("#form form")
+
+contactForm.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const formData = new formData(contactForm);
+  fetch(contactForm.getAttribute('action'),{
+    method: 'POST',
+    headers: {
+      'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
+    body: new URLSearchParams(formData).toString()
+  })
+  .then(function(res){
+    if (res) {
+      alert('worked');
     }
-  
-    var form = document.querySelectorAll('.my-form')[0]
-    form.addEventListener('submit', function (e) {
-      e.preventDefault()
-      sendData()
-    })
-  
-  }
-  
-  export default sendFormData
+  });
+
+});

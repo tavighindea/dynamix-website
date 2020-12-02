@@ -12,9 +12,7 @@ form.addEventListener('submit', function(elem) {
     elem.preventDefault();
 
     if (checkInputs() === true) {
-        formTitle.remove();
-        form.remove();
-        successMessage.style.display('flex');
+        
     }
 })
 
@@ -51,3 +49,4 @@ function isName(name) {
     return /^[a-zA-Z]+$/.test(name);
 }
 
+export default checkInputs();
