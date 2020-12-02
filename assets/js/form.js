@@ -23,10 +23,8 @@ form.addEventListener('submit', function(elem) {
         })
         .then(function(res) {
             if (res) {
-                M.toast({
-                    html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
-                    classes: 'pulse'
-                });
+                formTitle.remove();
+                form.remove()
             }
         });
     }
