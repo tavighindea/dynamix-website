@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+const testForm = document.querySelector("#contact-container-anchor form")
 const formTitle = document.getElementById('contact-title')
 const name = document.getElementById('name');
 const lastName = document.getElementById('last-name');
@@ -8,12 +9,12 @@ const lastNameError = document.getElementsById('last-name-error');
 const emailError = document.getElementsById('email-error');
 const successMessage = document.getElementsById('success-message');
 
-form.addEventListener('submit', function(elem) {
+testForm.addEventListener('submit', function(elem) {
     elem.preventDefault();
 
     if (checkInputs() === true) {
-        const formData = new formData(form);
-        fetch(form.getAttribute('action'),{
+        const formData = new formData(testForm);
+        fetch(testForm.getAttribute('action'),{
         method: 'POST',
         headers: {
             'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
