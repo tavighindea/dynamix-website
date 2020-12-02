@@ -58,7 +58,7 @@ form.addEventListener('submit', e => {
     e.preventDefault();
   
     const formData = new FormData(talkForm);
-    fetch(talkForm.getAttribute('action'), {
+    fetch(form.getAttribute('action'), {
       method: 'POST',
       headers: {
         'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
