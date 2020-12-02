@@ -44,7 +44,7 @@ function checkInputs() {
         return false;
     }
     if (lastNameValue === '' || (typeof lastNameValue) !== 'string' || !isName(lastNameValue)) {
-        lastNameError.style.display = 'block';;
+        lastNameError.style.display = 'block';
         return false;
     }
     if (emailValue === '') {
