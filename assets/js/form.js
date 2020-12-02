@@ -65,5 +65,3 @@ function isEmail(email) {
 function isName(name) {
     return /^[a-zA-Z]+$/.test(name);
 }
-
-export default checkInputs();
