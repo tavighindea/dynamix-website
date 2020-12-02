@@ -23,11 +23,14 @@ form.addEventListener('submit', function(elem) {
         })
         .then(res => {
             if (res) {
-                alert('worked');
+                M.toast({
+                    html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+                    classes: 'pulse'
+                });
             }
         });
     }
-})
+});
 
 function checkInputs() {
     //get values from the inputs
