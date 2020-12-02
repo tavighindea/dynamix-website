@@ -1,4 +1,4 @@
-let contactForm = document.querySelector("#form form");
+let contactForm = document.querySelector("#contact form");
 
 contactForm.addEventListener('submit', function(e){
   e.preventDefault();
