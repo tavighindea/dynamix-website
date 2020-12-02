@@ -34,6 +34,7 @@ testForm.addEventListener('submit', function(elem) {
 
 function checkInputs() {
     //get values from the inputs
+    console.log('intra in functie');
     const nameValue = name.value.trim();
     const lastNameValue = lastName.value.trim();
     const emailValue = email.value.trim();
