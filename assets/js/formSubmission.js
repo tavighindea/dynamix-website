@@ -1,6 +1,4 @@
-import {checkInputs} from '/assets/js/form.js';
-
-let contactForm = document.querySelector("#form form")
+let contactForm = document.querySelector("#form form");
 
 contactForm.addEventListener('submit', function(e){
   e.preventDefault();
