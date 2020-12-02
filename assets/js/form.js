@@ -7,7 +7,7 @@ const email = document.getElementById('email');
 const nameError = document.getElementsByClassName('name-error');
 const lastNameError = document.getElementsByClassName('last-name-error');
 const emailError = document.getElementsByClassName('email-error');
-const successMessage = document.getElementsById('success-message');
+
 
 testForm.addEventListener('submit', function(elem) {
     elem.preventDefault();
