@@ -12,7 +12,7 @@ const emailError = document.getElementsByClassName('email-error');
 testForm.addEventListener('submit', function(elem) {
     elem.preventDefault();
     
-    const formData = new formData(testForm);
+    const formData = new FormData(testForm);
     fetch(testForm.getAttribute('action'),{
     method: 'POST',
     headers: {
