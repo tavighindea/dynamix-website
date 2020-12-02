@@ -21,7 +21,7 @@ form.addEventListener('submit', function(elem) {
         },
         body: new URLSearchParams(formData).toString()
         })
-        .then(function(res){
+        .then(res => {
             if (res) {
                 alert('worked');
             }
