@@ -40,19 +40,23 @@ function checkInputs() {
     const emailValue = email.value.trim();
 
     if (nameValue === '' || (typeof nameValue) !== 'string' || !isName(nameValue)) {
-        nameError.style.display = 'block';
+        nameError.classList.remove('inactive');
+        nameError.classList.add('active');
         return false;
     }
     if (lastNameValue === '' || (typeof lastNameValue) !== 'string' || !isName(lastNameValue)) {
-        lastNameError.style.display = 'block';
+        lastNameError.classList.remove('inactive');
+        lastNameError.classList.add('active');
         return false;
     }
     if (emailValue === '') {
-        emailError.style.display = 'block';
+        emailError.classList.remove('inactive');
+        emailError.classList.add('active');
         return false;
     }
     if (!isEmail(emailValue)) {
-        emailError.style.display = 'block';
+        emailError.classList.remove('inactive');
+        emailError.classList.add('active');
         return false;
     }
     return true;
