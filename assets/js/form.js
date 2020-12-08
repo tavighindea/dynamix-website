@@ -22,7 +22,7 @@ testForm.addEventListener('submit', function(elem) {
     body: new URLSearchParams(formData).toString()
     })
     .then(function() {
-        if (checkInputs() === true) {
+        /* if (checkInputs() === true) {
             M.toast({
                 html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
                 classes: 'pulse'
@@ -34,11 +34,69 @@ testForm.addEventListener('submit', function(elem) {
                 classes: 'pulse'
             })
         }
-    });
+    }); */
+    console.log('intra in functie');
+    const nameValue = name.value.trim();
+    const lastNameValue = lastName.value.trim();
+    const emailValue = email.value.trim();
+
+    if (nameValue === '' || (typeof nameValue) !== 'string' || !isName(nameValue)) {
+        nameError.classList.remove('inactive');
+        nameError.classList.add('active');
+        M.toast({
+            html: 'Numele nu este corect!',
+            classes: 'pulse'
+        });
+    }else {
+        M.toast({
+            html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+            classes: 'pulse'
+        });
+    }
+    if (lastNameValue === '' || (typeof lastNameValue) !== 'string' || !isName(lastNameValue)) {
+        lastNameError.classList.remove('inactive');
+        lastNameError.classList.add('active');
+        M.toast({
+            html: 'Prenumele nu este corect!',
+            classes: 'pulse'
+        });
+    }else {
+        M.toast({
+            html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+            classes: 'pulse'
+        });
+    }
+    if (emailValue === '') {
+        emailError.classList.remove('inactive');
+        emailError.classList.add('active');
+        M.toast({
+            html: 'Campul de email este gol!',
+            classes: 'pulse'
+        });
+    }else {
+        M.toast({
+            html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+            classes: 'pulse'
+        });
+    }
+    if (!isEmail(emailValue)) {
+        emailError.classList.remove('inactive');
+        emailError.classList.add('active');
+        M.toast({
+            html: 'Campul de email este incorect!',
+            classes: 'pulse'
+        });
+    }else {
+        M.toast({
+            html: 'Veți fi contactat/ă pentru o ședinta de probă GRATUITA!',
+            classes: 'pulse'
+        });
+    }
+    return true;
     
 });
 
-function checkInputs() {
+/* function checkInputs() {
     //get values from the inputs
     console.log('intra in functie');
     const nameValue = name.value.trim();
@@ -66,7 +124,7 @@ function checkInputs() {
         return false;
     }
     return true;
-}
+} */
 
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
