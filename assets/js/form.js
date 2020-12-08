@@ -28,6 +28,12 @@ testForm.addEventListener('submit', function(elem) {
                 classes: 'pulse'
             });
         }
+        else if () {
+            M.toast({
+                html: ' ceva ii gresit'
+                classes: 'pulse'
+            })
+        }
     });
     
 });
