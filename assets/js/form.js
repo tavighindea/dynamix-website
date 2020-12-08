@@ -28,7 +28,7 @@ testForm.addEventListener('submit', function(elem) {
                 classes: 'pulse'
             });
         }
-        else if () {
+        else {
             M.toast({
                 html: ' ceva ii gresit'
                 classes: 'pulse'
