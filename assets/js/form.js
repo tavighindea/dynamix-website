@@ -30,7 +30,7 @@ testForm.addEventListener('submit', function(elem) {
         }
         else {
             M.toast({
-                html: ' ceva ii gresit'
+                html: ' ceva ii gresit',
                 classes: 'pulse'
             })
         }
